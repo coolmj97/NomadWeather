@@ -1,2 +1,2 @@
-## very simple React-Native Weather App
+## React-Native Weather App
 - RN layout
