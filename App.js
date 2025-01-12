@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import Fontisto from '@expo/vector-icons/Fontisto';
 import Entypo from '@expo/vector-icons/Entypo';
+import { API_KEY } from '@env';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const API_KEY = 'd3cc3be48f483d22a7989cc80251af1d';
 const icons = {
   Clouds: 'cloudy',
   Clear: 'day-sunny',
@@ -72,7 +72,7 @@ export default function App() {
         }}
       >
         {currentWeather.length === 0 ? null : (
-          <Fontisto name={icons[currentWeather.weather[0].main]} size={68} color="#fff" />
+          <Fontisto name={icons[currentWeather?.weather[0]?.main]} size={68} color="#fff" />
         )}
       </View>
 
